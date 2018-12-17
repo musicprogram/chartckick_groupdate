@@ -1,4 +1,10 @@
-<%= column_chart Expense.group_by_month(:date).sum(:amount), prefix: "S", thousands: "," %>
+<%= column_chart @column_data, stacked: true, prefix: "S", thousands: "," %>
+
+<%= pie_chart Expense.group(:type).sum(:amount) %>
+
+
+<%= raw @column_data %>
+
 
 <table>
 	<thead>
@@ -20,3 +26,5 @@
 		<% end %>
 	</tbody>
 </table>
+
+
