@@ -1,9 +1,10 @@
+
+<input type="text" name="" id="rangepicker">
 <%= column_chart @column_data, stacked: true, prefix: "S", thousands: "," %>
 
 <%= pie_chart Expense.group(:type).sum(:amount) %>
 
 
-<%= raw @column_data %>
 
 
 <table>
@@ -28,3 +29,6 @@
 </table>
 
 
+<script>
+	$("#rangepicker").daterangepicker();
+</script>

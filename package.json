@@ -1,5 +1,9 @@
 {
   "name": "expenses_chart",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "daterangepicker": "^3.0.3",
+    "jquery": "^3.3.1",
+    "moment": "^2.23.0"
+  }
 }
